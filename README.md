@@ -3,6 +3,9 @@
 ## Description
 The Mood Boost Application is a simple and interactive web app designed to provide users with a quick dose of humor or motivation based on their mood. Users can choose between two tabs: "I Need a Joke" for a light-hearted joke or "I Need Motivation" for an inspirational quote from various categories. This application addresses the common problem of needing a quick pick-me-up or motivation in our busy lives.
 
+## Problem
+As someone who often experiences periods of low energy and motivation, I realized how challenging it can be to find a quick pick-me-up. There are days when I just need a light-hearted joke or a few words of inspiration to help shift my mood. This recurring need inspired me to create the Mood Boost Application. I wanted to design a simple tool that could provide instant access to humor and motivation, making it easier for others to combat those feelings of lethargy and rediscover their energy throughout the day.
+
 ## Problem Solved
 In our fast-paced world, people often seek brief moments of humor or motivation to uplift their spirits. This app simplifies that process by allowing users to quickly access jokes or motivational quotes with just a click, enhancing their mood and providing a brief escape.
 
