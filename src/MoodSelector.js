@@ -1,6 +1,8 @@
 // src/MoodSelector.js
 import React from 'react';
 
+// AI helped me divide this into a different file
+
 const MoodSelector = ({ tab, setTab, setCategory, category }) => {
   const handleTabChange = (newTab) => {
     setTab(newTab);
@@ -26,6 +28,7 @@ const MoodSelector = ({ tab, setTab, setCategory, category }) => {
     "movies", "success"
   ];
 
+
   return (
     <div className="mood-selector">
       <button onClick={() => handleTabChange("joke")} className={tab === "joke" ? "active" : ""}>
@@ -34,8 +37,9 @@ const MoodSelector = ({ tab, setTab, setCategory, category }) => {
       <button onClick={() => handleTabChange("motivation")} className={tab === "motivation" ? "active" : ""}>
         I need Motivation
       </button>
+      {/* used AI to help change to different categories */}
       {tab === "motivation" && (
-        <select onChange={(e) => setCategory(e.target.value)} value={category}>
+        <select onChange={(e) => setCategory(e.target.value)} value={category}> 
           {categories.map((cat) => (
             <option key={cat} value={cat}>
               {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -47,4 +51,4 @@ const MoodSelector = ({ tab, setTab, setCategory, category }) => {
   );
 };
 
-export default MoodSelector;
+export default MoodSelector; // export the mood selector component

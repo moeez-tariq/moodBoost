@@ -1,7 +1,9 @@
 // src/MoodContent.js
 import React from 'react';
 
-const MoodContent = ({ content }) => {
+// AI helped me divide this into a different file
+
+const MoodContent = ({ content }) => { // mood content component
   return (
     <div className="mood-content">
       <p>{content}</p>
@@ -9,4 +11,4 @@ const MoodContent = ({ content }) => {
   );
 };
 
-export default MoodContent;
+export default MoodContent; // export the mood content component

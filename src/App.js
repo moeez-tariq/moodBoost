@@ -1,19 +1,22 @@
 // src/App.js
+// import all the necessary dependencies
 import React, { useState } from 'react';
 import './App.css';
 import MoodSelector from './MoodSelector';
 import MoodContent from './MoodContent';
 
-function App() {
+function App() { // App component
+  // define state variables and initialize them
   const [tab, setTab] = useState("joke");
   const [category, setCategory] = useState("happiness");
   const [content, setContent] = useState("");
 
   const fetchContent = async () => {
-    setContent("Loading...");
+    setContent("Loading..."); // show loading message
 
     try {
       let response;
+      // if tab is joke, fetch a joke
       if (tab === "joke") {
         // Fetch a joke
         response = await fetch("https://official-joke-api.appspot.com/random_joke");
@@ -21,16 +24,16 @@ function App() {
           throw new Error("Error fetching joke");
         }
         const jokeData = await response.json();
-        setContent(`${jokeData.setup} - ${jokeData.punchline}`);
-      } else if (tab === "motivation") {
+        setContent(`${jokeData.setup} - ${jokeData.punchline}`); // set the joke content
+      } else if (tab === "motivation") { // if tab is motivation, fetch a motivational quote
         // Fetch a motivational quote
-        const apiKey = process.env.REACT_APP_QUOTE_API_KEY; // Get API key from .env
-        const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+        const apiKey = process.env.REACT_APP_QUOTE_API_KEY; // get API key from .env
+        const apiUrl = `https://api.api-ninjas.com/v1/quotes?category=${category}`; // category is set by user
         
         response = await fetch(apiUrl, {
           method: 'GET',
           headers: {
-            'X-Api-Key': apiKey
+            'X-Api-Key': apiKey  // set the API key in the header
           }
         });
 
@@ -40,7 +43,7 @@ function App() {
 
         const quoteData = await response.json();
         if (quoteData.length > 0) {
-          setContent(`"${quoteData[0].quote}" - ${quoteData[0].author}`); // Use the first quote returned
+          setContent(`"${quoteData[0].quote}" - ${quoteData[0].author}`); // use the first quote returned
         } else {
           setContent("No quotes found for this category.");
         }
@@ -51,15 +54,15 @@ function App() {
     }
   };
 
-  return (
+  return ( // render the App component
     <div className="App">
       <h1>Mood Boost</h1>
       <MoodSelector 
         tab={tab} 
         setTab={setTab} 
-        setCategory={setCategory} 
+        setCategory={setCategory}  
         fetchContent={fetchContent} 
-        category={category} // Pass category here
+        category={category} // pass category here
       />
       <button onClick={fetchContent} className="fetch-button">
         Get {tab === "joke" ? "Joke" : "Motivation"}
@@ -69,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // export the App component

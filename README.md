@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Mood Boost Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The Mood Boost Application is a simple and interactive web app designed to provide users with a quick dose of humor or motivation based on their mood. Users can choose between two tabs: "I Need a Joke" for a light-hearted joke or "I Need Motivation" for an inspirational quote from various categories. This application addresses the common problem of needing a quick pick-me-up or motivation in our busy lives.
 
-## Available Scripts
+## Problem Solved
+In our fast-paced world, people often seek brief moments of humor or motivation to uplift their spirits. This app simplifies that process by allowing users to quickly access jokes or motivational quotes with just a click, enhancing their mood and providing a brief escape.
 
-In the project directory, you can run:
+## Features
+- Two tabs to select between jokes and motivational quotes.
+- Ability to choose from a variety of quote categories when selecting motivation.
+- Fetches random jokes and quotes from external APIs.
 
-### `npm start`
+## APIs Used
+- **Official Joke API**: Used to fetch random jokes.
+- **API Ninjas Quotes API**: Used to retrieve motivational quotes based on user-selected categories.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### API Integration
+1. **Jokes**: The application fetches a random joke from the Official Joke API when the "I Need a Joke" button is clicked.
+2. **Motivational Quotes**: When the "I Need Motivation" tab is selected, the user can choose from various categories (e.g., happiness, success, love). The application then fetches a relevant quote from the API Ninjas Quotes API based on the selected category.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm (Node package manager)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup and Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/moeez-tariq/moodBoost
+   cd moodBoost
+   ```
 
-### `npm run build`
+2. Install the required dependencies:
+   ```bash
+    npm install
+    ```
+3. Create a .env file and add the following environment variables:
+    ```bash
+    REACT_APP_QUOTE_API_KEY=YOUR_API_KEY
+    ```
+4. Start the application:
+    ```bash
+    npm start
+    ```
+5. Open the application in your browser:
+    ```
+    http://localhost:3000/
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- React
+- Axios (for API requests)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+This project utilized AI-generated code portions for the initial setup, logic design, and overall application structure. Most of the aesthetics were generated by AI. The AI also assisted in segregating the code into different files, which improved organization and maintainability. Additionally, the guidance provided by the AI was instrumental in speeding up development and ensuring best practices were followed.
